@@ -70,3 +70,31 @@ body {
     transform-origin: bottom center;
     animation: tick 1200ms ease-in-out infinite;
 }
+
+#count{
+    font-style: normal;
+    font-size: xx-large;
+    font-weight: bold;
+    margin: 24px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#checkBoxArea{
+    display: flex;
+    flex-direction: row;
+}
+
+label{
+    font-style: normal;
+    font-size: large;
+    font-weight: bold;
+    margin: 24px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.timing{width: 198px;}
+
+.instruments{
+    display: flex;
+    flex-direction: column;
+}
