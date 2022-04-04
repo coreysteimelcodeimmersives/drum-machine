@@ -19,6 +19,9 @@ let hiHatBox = document.querySelector('#hi-hat');
 let hiHatBoxCount = document.querySelector('#hi-hat-timing');
 let kickDrumBox = document.querySelector('#kick-drum');
 let kickDrumBoxCount = document.querySelector('#kick-drum-timing');
+let snareDrumInterval;
+let hiHatInterval;
+let kickDrumInterval;
 
 
 // This function is called every 600ms
@@ -27,6 +30,10 @@ function update() {
     // Update count
     metCount = (metCount % 4) + 1;
     console.log(metCount);
+
+    snareDrumInterval = document.querySelector(`#snare-drum-${metCount}`);
+    hiHatInterval = document.querySelector(`#hi-hat-${metCount}`);
+    kickDrumInterval = document.querySelector(`#kick-drum-${metCount}`);
 
     if (metronomeBox.checked == true){
         if (metCount%4 === 0){
@@ -57,6 +64,16 @@ function update() {
             kickDrum.play();
         } 
         
+    }
+
+    if (snareDrumInterval.checked == true){
+        snareDrum.play();
+    }
+    if (kickDrumInterval.checked == true){
+        kickDrum.play();
+    }
+    if (hiHatInterval.checked == true){
+        hiHat.play();
     }
 
     countText.innerText = metCount;
